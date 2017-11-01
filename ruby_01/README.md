@@ -1,4 +1,4 @@
-# 
+# Fixnum#+を再定義して足し算の結果に必ず+1されるようにする。さらに、`1+1`の場合は必ず答えが100になる。
 ```rb
 class Fixnum
   alias_method :old_add, :+
