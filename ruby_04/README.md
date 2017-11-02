@@ -1,0 +1,9 @@
+# 範囲を指定してその間の売上合計を出す
+* ある条件に合えばそれを取り出す処理は、select
+* injectは初期値を設定して中身をぐるぐる回して、それらの結果を返す
+* order.amountをmap(&:amount）で代用
+* order_within_rangeをprivateメソッドにして外に出してしまう。再利用が可能に、可読性上がる。
+* order.placed_atが範囲内に入っているかどうかを聞いているからよくないので、言うだけにする。
+* start_date、end_dateと言うものは常にペアで、どちらか一つでは成り立たないので、ひとまとめに
+* 日付の範囲を判断する処理は、cover?
+* total_salesをprivateメソッドにする。
