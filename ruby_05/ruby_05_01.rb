@@ -44,10 +44,25 @@ process_users_v2(users)
 # kazuki
 # kazuki@mail.com
 
-a = [:Chinone]
+data = [:Chinone]
 scores = {Carol: 90, Alice: 50, David: 40, Bob: 60}
-names = scores.each_with_object(a) do |(key, val), arr|
+names = scores.each_with_object(data) do |(key, val), arr|
   arr << key if val >= 60
 end
 p names # [:Chinone, :Carol, :Bob]
 
+def method_v1
+  if block_given?
+    return yield
+  else
+    'no block'
+  end
+end
+p method_v1 # no block
+p method_v1 {'block'} # block
+
+def method_v2(a, b)
+  yield(a, b)
+end
+plus = method_v2(3, 3) { |x, y| x + y } # 6
+times = method_v2(3, 3) { |x, y| x * y } # 9
