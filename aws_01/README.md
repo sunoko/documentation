@@ -1,5 +1,12 @@
 # Amazon Web Servicesネットワーク入門
 ![](AWS_Networking.png)
+# 概要
+1. VPCにパブリックなサブネットとプライベートなサブネットを作成する
+1. パブリックなサブネットにWebサーバー用EC2、プライベートなサブネットにDBサーバー用EC2を作成する。
+  * Webサーバー：Apache、Wordpress
+  * DBサーバー：Mysql
+1. Webサーバーにインターネットからアクセスできるようにインターネットゲートウェイを設置する。
+1. DBサーバーがインターネットに接続できるようにNATゲートウェイを設置する。 
 # VPC
 1. Region
 1. ネームタグ（VPCの名前）
@@ -36,7 +43,7 @@
 # プライベートなネットワーク
 1. プライベートなサブネット作成
 1. EC2配置
-  1. scp -i mykey.pem mykey.pem ec2-user@52.199.187.190:~/.ssh/
+  1. scp -i mykey.pem mykey.pem ec2-user@パブリックIPアドレス:~/.ssh/
   1. chmod 600 ~/.ssh/mykey.pem
   1. ssh ec2-user@10.0.1.10 -i ~/.ssh/mykey.pem
 # NATゲートウェイ構築
