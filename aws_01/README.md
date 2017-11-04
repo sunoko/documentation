@@ -1,4 +1,5 @@
 # Amazon Web Servicesネットワーク入門
+![](AWS_Networking.png)
 # VPC
 1. Region
 1. ネームタグ（VPCの名前）
