@@ -1,7 +1,1 @@
-# wordpress
-## アップロード
-## 
-## 
-## 
-## 
-## 
+# powershell
